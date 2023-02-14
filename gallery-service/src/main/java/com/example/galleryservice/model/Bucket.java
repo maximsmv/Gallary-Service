@@ -5,14 +5,16 @@ import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 @Data
 @Builder
 @AllArgsConstructor
-@Document(collection = "buckets")
+@Document(collation = "buckets")
 public class Bucket {
+
     @Id
     private String id;
     @NotBlank
